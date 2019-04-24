@@ -1,5 +1,6 @@
 # Fate_backend
 ## 姓名搜索
+网址：域名/name_search_search  
 ### 前端给后端json文件格式：  
 {  
 name:英灵姓名  
@@ -15,6 +16,7 @@ name:英灵姓名
 }  
   
 ## 特征搜索
+网址：域名/characteristics_search  
 ### 前端给后端json文件格式：  
 {  
 “origin”:“明史”  
@@ -38,6 +40,7 @@ name:英灵姓名
 }  
 
 ## 英灵界面
+网址：域名/servent_infomation  
 ### 前端给后端json文件格式：  
 {  
 servent_id:XXXXXX  
