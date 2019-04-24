@@ -1,6 +1,6 @@
 # Fate_backend
 ## 姓名搜索
-网址：域名/name_search_search  
+网址：域名/name_search  
 ### 前端给后端json文件格式：  
 {  
 name:英灵姓名  
