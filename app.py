@@ -11,13 +11,8 @@ app = Flask(__name__)
 
 @app.route('/',methods=['GET','POST'])
 def hello_world():
-    return 'hellow world'
+    return '欢迎来到cs304期末Fate_project'
 
-@app.route('/test',methods=['GET','POST'])
-def test():
-    if(request.data=="我好牛逼"):
-        return '你好牛逼'
-    return '你不牛逼'
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0",port=5000)
+    app.run()
