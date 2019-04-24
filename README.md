@@ -52,22 +52,22 @@ servent_name_english: XXXXXX
 height: XXX  
 weight: XXX  
 gender: XXX  
-strength:XXX  
-endurance:XXX  
-agility:XXX  
-mana:XXX  
-luck:XXX  
-noble_phantasm:XXX  
-craft_name:XXX  
-craft_description:XXX  
-craft_src:XXX  
-alignment:[XXX,XXX,XXX]（可能多阵营）  
-class:[XXX,XXX,XXX]（可能多职阶）  
-illustrator:[XXX,XXX,XXX]（可能多画师）  
-voice_actor:[XXX,XXX,XXX](可能多声优）  
-region:[XXX,XXX,XXX]（可能多地域）  
-origin:[XXX,XXX,XXX]（可能多起源）  
-prototype:[XXX,XXX,XXX]（可能多原型）  
-full_picture:[XXX,XXX,XXX]（可能多英灵图片）  
-bond_text:[XXX,XXX,XXX]（可能多出处）  
+strength: XXX  
+endurance: XXX  
+agility: XXX  
+mana: XXX  
+luck: XXX  
+noble_phantasm: XXX  
+craft_name: XXX  
+craft_description: XXX  
+craft_src: XXX  
+alignment: [XXX,XXX,XXX]（可能多阵营）  
+class: [XXX,XXX,XXX]（可能多职阶）  
+illustrator: [XXX,XXX,XXX]（可能多画师）  
+voice_actor: [XXX,XXX,XXX](可能多声优）  
+region: [XXX,XXX,XXX]（可能多地域）  
+origin: [XXX,XXX,XXX]（可能多起源）  
+prototype: [XXX,XXX,XXX]（可能多原型）  
+full_picture: [XXX,XXX,XXX]（可能多英灵图片）  
+bond_text: [XXX,XXX,XXX]（可能多出处）  
 }  
