@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/',methods=['GET','POST'])
 def hello_world():
-    return '欢迎来到cs304期末Fate_project'
+    return '欢迎来到数据库期末Fate_project'
 
 
 if __name__ == '__main__':
