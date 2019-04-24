@@ -1,11 +1,11 @@
 # Fate_backend
-姓名搜索：
-前端给后端json文件格式：
-{
-“name”:英灵姓名
-}
-后端给前端json文件格式：
-{
+姓名搜索： 
+前端给后端json文件格式： 
+{ 
+“name”:英灵姓名 
+} 
+后端给前端json文件格式： 
+{ 
 英灵1id: {'servent_name': '兰陵王', 
 'servent_profile_pic': ['https://fgo.wiki/images/thumb/9/97/Servant227%E6%AD%A3%E9%9D%A21.png/150px-Servant227%E6%AD%A3%E9%9D%A21.png']},
 
