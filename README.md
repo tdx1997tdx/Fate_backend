@@ -1,5 +1,5 @@
 # Fate_backend
-##姓名搜索：  
+##姓名搜索
 前端给后端json文件格式：  
 {  
 “name”:英灵姓名  
@@ -14,7 +14,7 @@
   
 }  
   
-##特征搜索：  
+##特征搜索
 前端给后端json文件格式：  
 {  
 “origin”:“明史”  
@@ -33,11 +33,11 @@
 'servent_profile_pic': ['https://fgo.wiki/images/thumb/9/97/Servant227%E6%AD%A3%E9%9D%A21.png/150px-Servant227%E6%AD%A3%E9%9D%A21.png']},  
 
 226: {'servent_name': 'hahaha',   
-'servent_profile_pic': ['https://fgo.wiki/images/thumb/9/97/Servant227%E6%AD%A3%E9%9D%A21.png/150px-Servant227%E6%AD%A3%E9%9D%A21.png']}   
+'servent_profile_pic': ['https://fgo.wiki/images/thumb/9/97/Servant227%E6%AD%A3%E9%9D%A21.png/150px-Servant227%E6%AD%A3%E9%9D%A21.png']} 
+...  
 }  
 
-##英灵界面：  
-  
+##英灵界面
 前端给后端json文件格式：  
 {  
 servent_id:XXXXXX  
