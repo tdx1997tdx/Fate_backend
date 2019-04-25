@@ -10,7 +10,7 @@ def name_search(name,conn_info=c.conn3_info):
     dic_info = []  # 所有人
     for row in result:
         dic_one_person_info = {}  # 单个人
-        dic_one_person_info['id'] = row[0]
+        dic_one_person_info['id'] = str(row[0])
         dic_one_person_info["servent_name"]=row[1]
         temp_sql="select profile_pic from servent_profile_pic where servent_id='%s'" % (row[0])
         re=[i[0] for i in opsql.select(temp_sql,conn_info)]
