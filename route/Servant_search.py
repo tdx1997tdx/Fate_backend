@@ -6,6 +6,7 @@ page2=Blueprint("page2",__name__)
 def name_search():
     try:
         print(request.form)
+        print(request.data)
         data = json.loads(request.get_data())
     except:
         return 'No Json Input'
