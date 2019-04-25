@@ -1,6 +1,6 @@
 from op_sql import op_postgresql as opsql
 import op_sql.conn_sql as c
-def servent_infomation(id,conn_info=c.conn1_info):
+def servent_infomation(id,conn_info=c.conn3_info):
     sql="select * from servent where servent_id='%s'"%(id)
     result = [i for i in opsql.select(sql,conn_info)]
     dic_info = {}

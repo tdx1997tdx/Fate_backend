@@ -1,6 +1,6 @@
 from op_sql import op_postgresql as opsql
 import op_sql.conn_sql as c
-def name_search(name,conn_info=c.conn1_info):
+def name_search(name,conn_info=c.conn3_info):
     search_name = '%'
     for i in name:
         search_name += i

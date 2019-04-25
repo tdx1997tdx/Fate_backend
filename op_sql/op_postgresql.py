@@ -1,6 +1,6 @@
 import psycopg2
 import op_sql.conn_sql as c
-def select(sql,conn_info=c.conn3_info):
+def select(sql,conn_info=c.conn1_info):
     conn = psycopg2.connect(database=conn_info[0], user=conn_info[1], password=conn_info[2], host=conn_info[3], port=conn_info[4])
     cursor = conn.cursor()
     # 执行SQL语句
@@ -14,7 +14,7 @@ def select(sql,conn_info=c.conn3_info):
     # 关闭连接
     conn.close()
 
-def insert(sql,conn_info=c.conn3_info):
+def insert(sql,conn_info=c.conn1_info):
     conn = psycopg2.connect(database=conn_info[0], user=conn_info[1], password=conn_info[2], host=conn_info[3],
                             port=conn_info[4])
     cursor = conn.cursor()
@@ -33,7 +33,7 @@ def insert(sql,conn_info=c.conn3_info):
     conn.close()
     return True
 
-def update(sql,conn_info=c.conn3_info):
+def update(sql,conn_info=c.conn1_info):
     conn = psycopg2.connect(database=conn_info[0], user=conn_info[1], password=conn_info[2], host=conn_info[3],
                             port=conn_info[4])
     cursor = conn.cursor()
@@ -53,7 +53,7 @@ def update(sql,conn_info=c.conn3_info):
     conn.close()
     return True
 
-def delete(sql,conn_info=c.conn3_info):
+def delete(sql,conn_info=c.conn1_info):
     conn = psycopg2.connect(database=conn_info[0], user=conn_info[1], password=conn_info[2], host=conn_info[3],
                             port=conn_info[4])
     cursor = conn.cursor()

@@ -1,6 +1,6 @@
 from op_sql import op_postgresql as opsql
 import op_sql.conn_sql as c
-def characteristic_search(info,weight,height,conn_info=c.conn1_info):
+def characteristic_search(info,weight,height,conn_info=c.conn3_info):
     select_sql="where "
     for key in info:
         if not info[key]=='null':
