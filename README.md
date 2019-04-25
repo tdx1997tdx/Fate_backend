@@ -6,14 +6,14 @@
 name:英灵姓名  
 }  
 ### 后端给前端json文件格式：  
-{  
-英灵1id: {servent_name: '英灵姓名1', 'servent_profile_pic': ['网址1','网址2',...]},  
+[  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},  
   
-英灵2id: {servent_name: '英灵姓名2', 'servent_profile_pic': ['网址1','网址2',...]},  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},   
   
 ...  
   
-}  
+]  
   
 ## 特征搜索
 网址：域名/characteristics_search  
@@ -30,14 +30,14 @@ name:英灵姓名
 “下限”,“上限”如果为空，用”-1”代替。  
   
 ### 后端给前端json文件格式：  
-{  
-英灵1id: {servent_name: '英灵姓名1', 'servent_profile_pic': ['网址1','网址2',...]},  
+[  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},  
   
-英灵2id: {servent_name: '英灵姓名2', 'servent_profile_pic': ['网址1','网址2',...]},  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},   
   
 ...  
   
-}  
+]  
 
 ## 英灵界面
 网址：域名/servent_infomation  
