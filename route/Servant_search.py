@@ -4,8 +4,14 @@ page2=Blueprint("page2",__name__)
 
 @page2.route('/name_search',methods=['GET','POST'])
 def name_search():
-    data = json.loads(request.get_data())
-    name=data.get('name')
+    try:
+        data = json.loads(request.get_data())
+    except:
+        return 'No Json Input'
+    try:
+        name=data['name']
+    except:
+        return 'Json Format Error'
     print(data)
     return json.jsonify(nss.name_search(name))
 
