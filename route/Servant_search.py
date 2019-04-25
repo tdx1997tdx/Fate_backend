@@ -5,8 +5,8 @@ page2=Blueprint("page2",__name__)
 @page2.route('/name_search',methods=['GET','POST'])
 def name_search():
     print(request.form)
-    print(request.data)
-    data = json.loads(request.data)
+    print(request.data.decode('utf-8'))
+    data = json.loads(request.data.decode('utf-8'))
     try:
         name=data['name']
     except:
