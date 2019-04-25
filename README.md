@@ -23,8 +23,10 @@ id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},
 “region”:“罗马”  
 “class”:“Ruler”  
 “alignment”:“秩序.中”  
-“weight”:[“下限”,“上限”]  
-“height ”:[“下限”,“上限”]  
+“weight_down”:“下限”  
+“weight_up”:“上限” 
+“height_down ”:“下限”  
+“height_up”:“上限”  
 }  
 如果为空，就用”null”字符串代替。  
 “下限”,“上限”如果为空，用”-1”代替。  
