@@ -19,11 +19,11 @@ def name_search():
         return 'Json Format Error'
     try:
         weight = []
-        weight.append(0 if data.get('weight')[0]=='-1' else int(data.get('weight')[0]))
-        weight.append(sys.maxsize if data.get('weight')[1] == '-1' else int(data.get('weight')[1]))
+        weight.append(0 if data['weight_down']=='-1' else int(data['weight_down']))
+        weight.append(sys.maxsize if data['weight_up'] == '-1' else int(data['weight_up']))
         height = []
-        height.append(0 if data.get('height')[0] == '-1' else int(data.get('height')[0]))
-        height.append(sys.maxsize if data.get('height')[1] == '-1' else int(data.get('height')[1]))
+        height.append(0 if data['height_down'] == '-1' else int(data['height_down']))
+        height.append(sys.maxsize if data['height_up'] == '-1' else int(data['height_up']))
     except:
         return 'Weight Or Height Format Error'
     print(data)
