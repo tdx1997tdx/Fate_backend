@@ -5,6 +5,7 @@ page2=Blueprint("page2",__name__)
 @page2.route('/name_search',methods=['GET','POST'])
 def name_search():
     try:
+        print(request.form)
         data = json.loads(request.get_data())
     except:
         return 'No Json Input'

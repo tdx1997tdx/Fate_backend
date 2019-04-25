@@ -1,7 +1,7 @@
 import json
 import requests
 
-def name_search_test():
+def name_search_test1():
     url = "https://dexuannb.tk/name_search"
     values = {'name':'兰陵王'}
     print(values)
@@ -18,4 +18,5 @@ def name_search_test():
     # 打印接口返回的数据,且以中文编码
     print(new_req)
 
-name_search_test()
+
+name_search_test1()
