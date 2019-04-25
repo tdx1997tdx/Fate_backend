@@ -6,7 +6,6 @@ app = Flask(__name__)
 app.register_blueprint(page2)
 app.register_blueprint(page3)
 app.register_blueprint(page4)
-app = Flask(__name__)
 
 
 @app.route('/',methods=['GET','POST'])
