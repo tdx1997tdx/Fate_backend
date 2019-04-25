@@ -6,7 +6,7 @@ page2=Blueprint("page2",__name__)
 def name_search():
     print(request.form)
     print(request.data)
-    data = json.loads(request.data,decoding="utf-8")
+    data = json.loads(request.data)
     try:
         name=data['name']
     except:
