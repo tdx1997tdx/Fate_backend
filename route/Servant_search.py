@@ -4,10 +4,9 @@ page2=Blueprint("page2",__name__)
 
 @page2.route('/name_search',methods=['GET','POST'])
 def name_search():
-    try:
-        data = json.loads(request.data)
-    except:
-        return 'No Json Input'
+    print(request.form)
+    print(request.data)
+    data = json.loads(request.data)
     try:
         name=data['name']
     except:
