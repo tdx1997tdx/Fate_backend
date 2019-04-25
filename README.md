@@ -24,7 +24,7 @@ id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},
 “class”:“Ruler”  
 “alignment”:“秩序.中”  
 “weight_down”:“下限”  
-“weight_up”:“上限” 
+“weight_up”:“上限”  
 “height_down ”:“下限”  
 “height_up”:“上限”  
 }  
