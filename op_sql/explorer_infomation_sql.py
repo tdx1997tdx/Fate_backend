@@ -23,7 +23,7 @@ def explorer_infomation(id,conn_info=c.get_now_conn()):
         pedias_dic={}
         pedias_dic['pedia_id']=i[0]
         pedias_dic['pedia_name'] = i[1]
-        pedias_dic['pedia_url:'] = i[2]
+        pedias_dic['pedia_url'] = i[2]
         dic_info['pedias'].append(pedias_dic)
 
     dic_info['articles'] =[]
