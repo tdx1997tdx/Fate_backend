@@ -40,9 +40,10 @@ def servent_infomation(id,conn_info=c.get_now_conn()):
     full_picture_res=[i[0] for i in opsql.select(full_picture_sql, conn_info)]
     dic_info["full_picture"] = full_picture_res[random.randint(0,len(full_picture_res)-1)]
     big_sql = "select region_name,origin_name,prototype_name from servent_prototype sp inner join prototype p on sp.prototype_id=p.prototype_id inner join prototype_origin po on sp.prototype_id=po.prototype_id inner join prototype_region pr on sp.prototype_id=pr.prototype_id inner join region r on pr.region_id=r.region_id inner join origin o on po.origin_id=o.origin_id where servent_id='%s'" % (id)
-    region_res=list(set([i[0] for i in opsql.select(big_sql, conn_info)]))
-    origin_res=list(set([i[1] for i in opsql.select(big_sql, conn_info)]))
-    prototype_res=list(set([i[2] for i in opsql.select(big_sql, conn_info)]))
+    res=[i for i in opsql.select(big_sql, conn_info)]
+    region_res=list(set([i[0] for i in res]))
+    origin_res=list(set([i[1] for i in res]))
+    prototype_res=list(set([i[2] for i in res]))
     dic_info["region"] = region_res[random.randint(0,len(region_res)-1)]
     dic_info["origin"] = origin_res[random.randint(0,len(origin_res)-1)]
     dic_info["prototype"] = prototype_res[random.randint(0,len(prototype_res)-1)]
