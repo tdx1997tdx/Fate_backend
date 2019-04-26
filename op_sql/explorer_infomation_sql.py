@@ -34,8 +34,8 @@ def explorer_infomation(id,conn_info=c.get_now_conn()):
         articles_dic = {}
         articles_dic['article_id'] = i[0]
         articles_dic['article_title'] = i[1]
-        articles_dic['article_content:'] = i[2].replace('\n','')
-        articles_dic['author:'] = i[3]
+        articles_dic['article_content'] = i[2].replace('\n','')
+        articles_dic['author'] = i[3]
         dic_info['articles'].append(articles_dic)
 
     dic_info['books'] =[]
@@ -45,7 +45,7 @@ def explorer_infomation(id,conn_info=c.get_now_conn()):
         books_dic = {}
         books_dic['book_title'] = i[0]
         books_dic['isbn_code'] = i[1]
-        books_dic['book_writer:'] = i[2]
+        books_dic['book_writer'] = i[2]
         dic_info['books'].append(books_dic)
 
     return dic_info
