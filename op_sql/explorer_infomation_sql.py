@@ -16,7 +16,6 @@ def explorer_infomation(id,conn_info=c.get_now_conn()):
     region_id=list(set([i[3] for i in res]))[0]
     origin_id=list(set([i[4] for i in res]))[0]
     prototype_id=list(set([i[5] for i in res]))[0]
-
     dic_info['pedias'] =[]
     pedias_sql="select p.pedia_id,pedia_name,pedia_url from pedia p inner join pedia_name pn on p.pedia_id=pn.pedia_id where prototype_id='%s'"%(prototype_id)
     pedias_res=[i for i in opsql.select(pedias_sql, conn_info)]
@@ -47,7 +46,7 @@ def explorer_infomation(id,conn_info=c.get_now_conn()):
         books_dic['book_title'] = i[0]
         books_dic['isbn_code'] = i[1]
         books_dic['book_writer:'] = i[2]
-        dic_info['articles'].append(books_dic)
+        dic_info['books'].append(books_dic)
 
     return dic_info
 
