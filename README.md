@@ -110,3 +110,52 @@ articles: [{article_id:XXXXX,article_title:XXXXX,article_content:XXXXXX,author:X
 books: [{book_title:XXXXX,isbn_code:XXXXX,book_writer:XXXXXX},....]  
 
 }  
+
+## other界面
+网址：域名/prototype_search  
+### 前端给后端json文件格式：  
+{  
+prototype: XXXXXX  
+}  
+  
+### 后端给前端json文件格式：  
+[  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},  
+  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},   
+  
+...  
+  
+]  
+
+网址：域名/region_search  
+### 前端给后端json文件格式：  
+{  
+region: XXXXXX  
+}  
+  
+### 后端给前端json文件格式：  
+[  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},  
+  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},   
+  
+...  
+  
+]  
+
+网址：域名/origin_search  
+### 前端给后端json文件格式：  
+{  
+origin: XXXXXX  
+}  
+  
+### 后端给前端json文件格式：  
+[  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},  
+  
+id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},   
+  
+...  
+  
+]  
