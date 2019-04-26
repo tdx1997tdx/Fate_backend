@@ -1,6 +1,6 @@
 from op_sql import op_postgresql as opsql
 import op_sql.conn_sql as c
-def characteristic_search(info,weight,height,conn_info=c.conn3_info):
+def characteristic_search(info,weight,height,conn_info=c.get_now_conn()):
     select_sql="where "
     for key in info:
         if not info[key]=='null':
@@ -20,7 +20,7 @@ def characteristic_search(info,weight,height,conn_info=c.conn3_info):
         dic_info.append(dic_one_person_info)
     return dic_info
 
-def get_attribute(conn_info=c.conn3_info):
+def get_attribute(conn_info=c.get_now_conn()):
 
     dic_info = {}  # 4个list
     region_sql="select region_name from region"
