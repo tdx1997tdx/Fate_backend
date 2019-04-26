@@ -3,7 +3,7 @@ import requests
 
 def name_search_test1():
     url = "http://dexuannb.ml/name_search"
-    values = {'name':'兰陵王'}
+    values = {'name':'库丘林'}
     print(values)
     values_json = json.dumps(values)
     print(values_json)
