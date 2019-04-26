@@ -13,4 +13,12 @@ def prototype_search(prototype,conn_info=c.get_now_conn()):
         dic_info.append(dic_one_person_info)
     return dic_info
 
+def region_search(region,conn_info=c.get_now_conn()):
+    pass
+
+
+def origin_search(origin,conn_info=c.get_now_conn()):
+    pass
+
+
 #print(name_search("兰陵王",c.conn2_info))
