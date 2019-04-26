@@ -3,7 +3,7 @@ from op_sql import explorer_infomation_sql as eis
 page5=Blueprint("page5",__name__)
 
 @page5.route('/explorer_infomation',methods=['GET','POST'])
-def name_search():
+def explorer_infomation():
     try:
         data = json.loads(request.get_data())
     except:
