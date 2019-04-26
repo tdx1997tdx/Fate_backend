@@ -14,7 +14,7 @@ def prototype_search(prototype,conn_info=c.get_now_conn()):
     return dic_info
 
 def region_search(region,conn_info=c.get_now_conn()):
-    sql = "select region_name,s.servent_id,servent_name,profile_pic from servent s inner join servent_prototype sp on s.servent_id=sp.servent_id inner join prototype p on sp.prototype_id=p.prototype_id inner join servent_profile_pic spp on s.servent_id = spp.servent_id inner join prototype_region pr on p.prototype_id = pr.prototype_id inner join region r on pr.region_id = r.region_id where region_name='%s'"%(region)
+    sql = "select s.servent_id,servent_name,profile_pic from servent s inner join servent_prototype sp on s.servent_id=sp.servent_id inner join prototype p on sp.prototype_id=p.prototype_id inner join servent_profile_pic spp on s.servent_id = spp.servent_id inner join prototype_region pr on p.prototype_id = pr.prototype_id inner join region r on pr.region_id = r.region_id where region_name='%s'"%(region)
     result = [i for i in opsql.select(sql, conn_info)]
     dic_info = []  # 所有人
     for row in result:

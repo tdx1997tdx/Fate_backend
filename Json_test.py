@@ -2,8 +2,8 @@ import json
 import requests
 
 def name_search_test1():
-    url = "http://dexuannb.ml/prototype_search"
-    values = {'prototype':'阿拉什'}
+    url = "http://dexuannb.ml/region_search"
+    values = {'region':'英国'}
     print(values)
     values_json = json.dumps(values)
     print(values_json)
