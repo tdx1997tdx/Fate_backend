@@ -34,7 +34,7 @@ def explorer_infomation(id,conn_info=c.get_now_conn()):
         articles_dic = {}
         articles_dic['article_id'] = i[0]
         articles_dic['article_title'] = i[1]
-        articles_dic['article_content:'] = i[2]
+        articles_dic['article_content:'] = i[2].replace('\n','')
         articles_dic['author:'] = i[3]
         dic_info['articles'].append(articles_dic)
 
