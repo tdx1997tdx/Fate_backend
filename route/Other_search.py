@@ -16,7 +16,7 @@ def prototype_search():
     return json.jsonify(oss.prototype_search(prototype))
 
 @page6.route('/region_search',methods=['GET','POST'])
-def prototype_search():
+def region_search():
     try:
         data = json.loads(request.get_data())
     except:
@@ -29,7 +29,7 @@ def prototype_search():
     return json.jsonify(oss.region_search(region))
 
 @page6.route('/origin_search',methods=['GET','POST'])
-def prototype_search():
+def origin_search():
     try:
         data = json.loads(request.get_data())
     except:
