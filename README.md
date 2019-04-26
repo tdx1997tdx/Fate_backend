@@ -41,6 +41,20 @@ id: xxx servent_name: '英灵姓名1', 'servent_profile_pic': 网址},
   
 ]  
 
+  
+  
+网址：域名/get_attribute  
+### 前端给后端发送get请求  
+  
+### 后端给前端json文件格式：  
+{  
+region:[XXX,XXXX,XXX,...]  
+origin:[XXX,XXXX,XXX,...]  
+alignment:[XXX,XXXX,XXX,...]  
+servent_class:[XXX,XXXX,XXX,...]  
+
+}  
+
 ## 英灵界面
 网址：域名/servent_infomation  
 ### 前端给后端json文件格式：  
@@ -75,4 +89,24 @@ origin: [XXX,XXX,XXX]（可能多起源）
 prototype: [XXX,XXX,XXX]（可能多原型）  
 full_picture: [XXX,XXX,XXX]（可能多英灵图片）  
 bond_text: [XXX,XXX,XXX]（可能多出处）  
+}  
+
+## explorer界面
+网址：域名/explorer_infomation  
+### 前端给后端json文件格式：  
+{  
+servent_id:XXXXXX  
+}  
+  
+### 后端给前端json文件格式：  
+{  
+prototype: XXXXXX  
+region: XXXXXX  
+origin: XXXXXXX  
+pedias: [{pedia_id:XXXXX,pedia_name:XXXXX,pedia_url:XXXXXX},....]  
+
+articles: [{article_id:XXXXX,article_title:XXXXX,article_content:XXXXXX,author:XXXXXX},....]  
+
+books: [{book_title:XXXXX,isbn_code:XXXXX,book_writer:XXXXXX},....]  
+
 }  
