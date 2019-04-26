@@ -29,3 +29,6 @@ def name_search():
     print(data)
     return json.jsonify(css.characteristic_search(info,weight,height))
 
+@page3.route('/get_attribute',methods=['GET','POST'])
+def get_attribute():
+    return json.jsonify(css.get_attribute())

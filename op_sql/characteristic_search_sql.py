@@ -20,6 +20,19 @@ def characteristic_search(info,weight,height,conn_info=c.conn3_info):
         dic_info.append(dic_one_person_info)
     return dic_info
 
+def get_attribute(conn_info=c.conn3_info):
+
+    dic_info = {}  # 4个list
+    region_sql="select region_name from region"
+    origin_sql ="select origin_name from origin"
+    alignment_sql ="select alignment_name from alignment"
+    servent_class_sql ="select class_name from class"
+    dic_info['region']=[i[0] for i in opsql.select(region_sql, conn_info)]
+    dic_info['origin'] =[i[0] for i in opsql.select(origin_sql, conn_info)]
+    dic_info['alignment'] =[i[0] for i in opsql.select(alignment_sql, conn_info)]
+    dic_info['servent_class'] =[i[0] for i in opsql.select(servent_class_sql, conn_info)]
+    return dic_info
+
 def t1():
     info = {}
     info['origin_name'] = '史实'
