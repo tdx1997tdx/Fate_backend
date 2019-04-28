@@ -91,6 +91,17 @@ full_picture: [XXX,XXX,XXX]（可能多英灵图片）
 bond_text: [XXX,XXX,XXX]（可能多出处）  
 }  
 
+网址：域名//get_attribute  
+### 前端给后端直接发GET请求
+  
+### 后端给前端json文件格式：  
+{  
+"alignment":[xxx,xxx,xxx],  
+"origin":[xxx,xxx,xxx],  
+"region":[xxx,xxx,xxx],  
+"servent_class":[xxx,xxx,xxx]  
+}  
+
 ## explorer界面
 网址：域名/explorer_infomation  
 ### 前端给后端json文件格式：  
