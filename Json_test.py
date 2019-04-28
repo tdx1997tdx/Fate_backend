@@ -2,7 +2,7 @@ import json
 import requests
 
 def name_search_test1():
-    url = "http://dexuannb.ml/prototype_search"
+    url = "https://dararara.xyz/prototype_search"
     values = {'prototype':'尼禄·克劳狄乌斯'}
     print(values)
     values_json = json.dumps(values)
