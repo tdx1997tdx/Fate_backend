@@ -1,5 +1,5 @@
-from op_sql import op_postgresql as opsql
-import op_sql.conn_sql as c
+from basic_sql_op import op_postgresql as opsql
+import basic_sql_op.conn_sql as c
 import random
 def explorer_infomation(id,conn_info=c.get_now_conn()):
 

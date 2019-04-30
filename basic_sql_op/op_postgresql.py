@@ -1,5 +1,5 @@
 import psycopg2
-import op_sql.conn_sql as c
+import basic_sql_op.conn_sql as c
 def select(sql,conn_info=c.get_now_conn()):
     conn = psycopg2.connect(database=conn_info[0], user=conn_info[1], password=conn_info[2], host=conn_info[3], port=conn_info[4])
     cursor = conn.cursor()

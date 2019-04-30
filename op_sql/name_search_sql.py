@@ -1,5 +1,5 @@
-from op_sql import op_postgresql as opsql
-import op_sql.conn_sql as c
+from basic_sql_op import op_postgresql as opsql
+import basic_sql_op.conn_sql as c
 def name_search(name,conn_info=c.get_now_conn()):
     search_name = '%'
     for i in name:

@@ -1,6 +1,7 @@
-from op_sql import op_postgresql as opsql
-import op_sql.conn_sql as c
-import random
+from basic_sql_op import op_postgresql as opsql
+import basic_sql_op.conn_sql as c
+
+
 def prototype_search(prototype,conn_info=c.get_now_conn()):
     search = '%'
     for i in prototype:
