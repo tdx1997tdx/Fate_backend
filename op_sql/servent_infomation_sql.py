@@ -47,6 +47,7 @@ def servent_infomation(id,conn_info=c.get_now_conn()):
     dic_info["region"] = region_res[random.randint(0,len(region_res)-1)]
     dic_info["origin"] = origin_res[random.randint(0,len(origin_res)-1)]
     dic_info["prototype"] = prototype_res[random.randint(0,len(prototype_res)-1)]
+    print(dic_info)
     return dic_info
 
 #print(servent_infomation('19',c.conn2_info))
