@@ -6,7 +6,7 @@ def name_search(name,conn_info=c.get_now_conn()):
         search_name += i
         search_name += '%'
     sql="select servent_id,servent_name from servent where servent_name like '%s'"
-    result = [i for i in opsql.select(sql,(search_name,),conn_info)]
+    result = [i for i in opsql.select(sql,(name,),conn_info)]
     dic_info = []  # 所有人
     for row in result:
         dic_one_person_info = {}  # 单个人
