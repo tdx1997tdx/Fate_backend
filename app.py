@@ -1,5 +1,5 @@
 from flask import Flask
-from route.Servant_search import page2
+from route.Name_search import page2
 from route.Characteristics_search import page3
 from route.Servent_information import page4
 from route.Explorer_infomation import page5

@@ -2,8 +2,8 @@ import json
 import requests
 
 def name_search_test1():
-    url = "https://dararara.xyz/servent_infomation"
-    values = {'servent_id':'1'}
+    url = "https://dararara.xyz/name_search"
+    values = {'name':'%'}
     print(values)
     values_json = json.dumps(values)
     print(values_json)

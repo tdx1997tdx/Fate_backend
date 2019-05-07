@@ -1,10 +1,10 @@
 import psycopg2
 import basic_sql_op.conn_sql as c
-def select(sql,conn_info=c.get_now_conn()):
+def select(sql,para,conn_info=c.get_now_conn()):
     conn = psycopg2.connect(database=conn_info[0], user=conn_info[1], password=conn_info[2], host=conn_info[3], port=conn_info[4])
     cursor = conn.cursor()
     # 执行SQL语句
-    cursor.execute(sql)
+    cursor.execute(sql,para)
     # 获取所有记录列表
     results = cursor.fetchall()
     for row in results:
