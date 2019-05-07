@@ -10,6 +10,8 @@ def prototype_search():
         return 'No Json Input'
     try:
         prototype=data['prototype']
+        if (prototype == '%'):
+            return 'Json Format Error'
     except:
         return 'Json Format Error'
     print(data)
@@ -23,6 +25,8 @@ def region_search():
         return 'No Json Input'
     try:
         region=data['region']
+        if (region == '%'):
+            return 'Json Format Error'
     except:
         return 'Json Format Error'
     print(data)
@@ -36,6 +40,8 @@ def origin_search():
         return 'No Json Input'
     try:
         origin=data['origin']
+        if (origin == '%'):
+            return 'Json Format Error'
     except:
         return 'Json Format Error'
     print(data)

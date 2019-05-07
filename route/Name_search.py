@@ -10,6 +10,8 @@ def name_search():
         return 'No Json Input'
     try:
         name=data['name']
+        if(name=='%'):
+            return 'Json Format Error'
     except:
         return 'Json Format Error'
     print(data)

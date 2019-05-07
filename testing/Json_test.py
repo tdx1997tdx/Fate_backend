@@ -3,7 +3,7 @@ import requests
 
 def name_search_test1():
     url = "https://dararara.xyz/name_search"
-    values = {'name':'%'}
+    values = {'name':'亚瑟'}
     print(values)
     values_json = json.dumps(values)
     print(values_json)
