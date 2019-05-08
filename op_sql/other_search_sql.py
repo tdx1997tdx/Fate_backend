@@ -10,7 +10,7 @@ def prototype_search(prototype):
           "inner join servent_and_prototype sp on s.servent_id=sp.servent_id " \
           "inner join prototype p on sp.prototype_id=p.prototype_id " \
           "inner join servent_profile_pic spp on s.servent_id = spp.servent_id " \
-          "where prototype_name like %s"
+          "where prototype_name like %s;"
     result = db.select(sql,[search])
     dic_info = []  # 所有人
     for row in result:
@@ -34,7 +34,7 @@ def region_search(region):
           "inner join servent_profile_pic spp on s.servent_id = spp.servent_id " \
           "inner join prototype_and_region pr on p.prototype_id = pr.prototype_id " \
           "inner join region r on pr.region_id = r.region_id " \
-          "where region_name like %s"
+          "where region_name like %s;"
     result = db.select(sql,[search])
     dic_info = []  # 所有人
     for row in result:
@@ -59,7 +59,7 @@ def origin_search(origin):
           "inner join servent_profile_pic spp on s.servent_id = spp.servent_id " \
           "inner join prototype_and_origin po on p.prototype_id = po.prototype_id " \
           "inner join origin o on po.origin_id = o.origin_id " \
-          "where origin_name like %s"
+          "where origin_name like %s;"
     result = db.select(sql,[search])
     dic_info = []  # 所有人
     for row in result:

@@ -26,7 +26,7 @@ def characteristic_search(info,weight,height):
         dic_one_person_info = {}  # 单个人
         dic_one_person_info['id'] = str(row[0])
         dic_one_person_info["servent_name"]=row[1]
-        servent_profile_pic_sql="select profile_pic from servent_profile_pic where servent_id=%s"
+        servent_profile_pic_sql="select profile_pic from servent_profile_pic where servent_id=%s;"
         dic_one_person_info["servent_profile_pic"] = [i[0] for i in db.select(servent_profile_pic_sql,[row[0]])][0]
         dic_info.append(dic_one_person_info)
     db.close()
@@ -35,10 +35,10 @@ def characteristic_search(info,weight,height):
 def get_attribute():
     db = opsql.Database()
     dic_info = {}  # 4个list
-    region_sql="select region_name from region"
-    origin_sql ="select origin_name from origin"
-    alignment_sql ="select alignment_name from alignment"
-    servent_class_sql ="select class_name from class"
+    region_sql="select region_name from region;"
+    origin_sql ="select origin_name from origin;"
+    alignment_sql ="select alignment_name from alignment;"
+    servent_class_sql ="select class_name from class;"
     dic_info['region']=[i[0] for i in db.select(region_sql,[])]
     dic_info['origin'] =[i[0] for i in db.select(origin_sql,[])]
     dic_info['alignment'] =[i[0] for i in db.select(alignment_sql,[])]
