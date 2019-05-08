@@ -10,7 +10,8 @@ def select(sql,para,conn_info=c.get_now_conn()):
         results = cursor.fetchall()
         for row in results:
             yield row
-    except:
+    except Exception as e:
+        print(e)
         return []
     # 关闭游标
     cursor.close()
