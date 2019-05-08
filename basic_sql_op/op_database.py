@@ -1,26 +1,25 @@
 import psycopg2
-
+conn1_info = ("ubuntu", "ubuntu", "123456", "127.0.0.1", "5432")
+conn2_info = ("ubuntu", "ubuntu", "123456", "122.152.251.171", "5432")
 class Database:
-    conn1_info = ("ubuntu", "ubuntu", "123456", "127.0.0.1", "5432")
-    conn2_info = ("ubuntu", "ubuntu", "123456", "122.152.251.171", "5432")
-    def __init__(self):
-        self.connection = psycopg2.connect(database=self.get_now_info()[0], user=self.get_now_info()[1],
-                                           password=self.get_now_info()[2], host=self.get_now_info()[3],
-                                           port=self.get_now_info()[4])
+
+    def __init__(self,conn_info=conn1_info):
+        self.conn_info=conn_info
+        self.connection = psycopg2.connect(database=self.conn_info[0], user=self.conn_info[1],
+                                           password=self.conn_info[2], host=self.conn_info[3],
+                                           port=self.conn_info[4])
         self.cursor =self.connection.cursor()
 
     def connect(self):
-        self.connection = psycopg2.connect(database=self.get_now_info()[0], user=self.get_now_info()[1],
-                                           password=self.get_now_info()[2], host=self.get_now_info()[3],
-                                           port=self.get_now_info()[4])
+        self.connection = psycopg2.connect(database=self.conn_info[0], user=self.conn_info[1],
+                                           password=self.conn_info[2], host=self.conn_info[3],
+                                           port=self.conn_info[4])
         self.cursor = self.connection.cursor()
 
     def close(self):
         self.cursor.close()
         self.connection.close()
 
-    def get_now_info(self):
-        return self.conn1_info
 
     def select(self,sql,para):
         # 执行SQL语句

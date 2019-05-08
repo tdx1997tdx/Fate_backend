@@ -13,7 +13,7 @@ def name_search(name):
         dic_one_person_info['id'] = str(row[0])
         dic_one_person_info["servent_name"]=row[1]
         temp_sql="select profile_pic from servent_profile_pic where servent_id= %s;"
-        re=db.select(temp_sql,[row[0]])
+        re=[i[0] for i in db.select(temp_sql,[row[0]])]
         dic_one_person_info["servent_profile_pic"] = re[0]
         dic_info.append(dic_one_person_info)
     db.close()
