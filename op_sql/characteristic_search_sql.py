@@ -20,10 +20,7 @@ def characteristic_search(info,weight,height):
         'inner join servent_and_class sac on sac.servent_id=s.servent_id ' \
         'inner join class c on sac.class_id=c.class_id '
     sql+=select_sql+" group by s.servent_id;"
-    print(sql)
-    print(para)
     result = db.select(sql,para)
-    print(result)
     dic_info = []  # 所有人
     for row in result:
         dic_one_person_info = {}  # 单个人
