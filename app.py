@@ -10,6 +10,7 @@ app.register_blueprint(page3)
 app.register_blueprint(page4)
 app.register_blueprint(page5)
 app.register_blueprint(page6)
+app.config['JSON_AS_ASCII'] = False
 
 @app.route('/',methods=['GET','POST'])
 def hello_world():
