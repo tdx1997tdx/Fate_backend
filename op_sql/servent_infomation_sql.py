@@ -2,7 +2,7 @@ from basic_sql_op import op_database as opsql
 import random
 def servent_infomation(id):
     db = opsql.Database()
-    sql="select * from servent where servent_id=%s"
+    sql="select * from servent where servent_id=%s;"
     result =db.select(sql,[id])
     dic_info = {}
     row=result[0]
@@ -24,27 +24,27 @@ def servent_infomation(id):
     dic_info['craft_src'] = row[15]
     alignment_sql="select alignment_name from servent_and_alignment sa " \
                   "inner join alignment a on sa.alignment_id=a.alignment_id " \
-                  "where servent_id=%s"
+                  "where servent_id=%s;"
     alignment_res=db.select(alignment_sql,[id])
     dic_info["alignment"] = alignment_res[random.randint(0,len(alignment_res)-1)] if alignment_res!=[] else 'unknown'
     class_sql = "select class_name from servent_and_class sc " \
                 "inner join class c on sc.class_id=c.class_id " \
-                "where servent_id=%s"
+                "where servent_id=%s;"
     class_res=db.select(class_sql,[id])
     dic_info["class"] = class_res[random.randint(0,len(class_res)-1)]if class_res!=[] else 'unknown'
     illustrator_sql = "select illustrator_name from servent_and_illustrator si " \
                       "inner join illustrator i on si.illustrator_id=i.illustrator_id " \
-                      "where servent_id=%s"
+                      "where servent_id=%s;"
     illustrator_res=db.select(illustrator_sql,[id])
     dic_info["illustrator"] = illustrator_res[random.randint(0,len(illustrator_res)-1)]if illustrator_res!=[] else 'unknown'
     voice_actor_sql = "select voice_actor_name from servent_and_voice_actor sva " \
                       "inner join voice_actor va on sva.voice_actor_id=va.voice_actor_id " \
-                      "where servent_id=%s"
+                      "where servent_id=%s;"
     voice_actor_res=db.select(voice_actor_sql,[id])
     dic_info["voice_actor"] = voice_actor_res[random.randint(0,len(voice_actor_res)-1)]if voice_actor_res!=[] else 'unknown'
-    bond_text_sql = "select bond_text from servent_bond where servent_id=%s"
+    bond_text_sql = "select bond_text from servent_bond where servent_id=%s;"
     dic_info["bond_text"] =db.select(bond_text_sql,[id])
-    full_picture_sql="select servent_picture from servent_full_pic where servent_id=%s"
+    full_picture_sql="select servent_picture from servent_full_pic where servent_id=%s;"
     full_picture_res=db.select(full_picture_sql,[id])
     dic_info["full_picture"] = full_picture_res[random.randint(0,len(full_picture_res)-1)]if full_picture_res!=[] else 'unknown'
     big_sql = "select region_name,origin_name,prototype_name from servent_and_prototype sp " \
@@ -53,7 +53,7 @@ def servent_infomation(id):
               "inner join prototype_and_region pr on sp.prototype_id=pr.prototype_id " \
               "inner join region r on pr.region_id=r.region_id " \
               "inner join origin o on po.origin_id=o.origin_id " \
-              "where servent_id=%s"
+              "where servent_id=%s;"
     res=db.select(big_sql,[id])
     region_res=list(set([i[0] for i in res]))
     origin_res=list(set([i[1] for i in res]))
