@@ -10,8 +10,8 @@ def servent_infomation(id):
     dic_info['servent_name'] = row[1]
     dic_info['servent_name_japanese'] = row[2]
     dic_info['servent_name_english'] = row[3]
-    dic_info['height'] = str(row[4])
-    dic_info['weight'] = str(row[5])
+    dic_info['height'] = row[4]
+    dic_info['weight'] = row[5]
     dic_info['gender'] = row[6]
     dic_info['strength'] = row[7]
     dic_info['endurance'] = row[8]
