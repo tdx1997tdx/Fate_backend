@@ -37,7 +37,7 @@ def explorer_infomation(id,conn_info=c.get_now_conn()):
         dic_info['articles'].append(articles_dic)
 
     dic_info['books'] =[]
-    books_sql = "select book_name,isbn,writer_name from book b inner join book_and_writer baw on b.book_id=baw.book_id inner join writer w on w.writer_id=baw.writer_id where b.book_id in (select region_book.book_id from region_book where region_id='%s' union select origin_book.book_id from origin_book where origin_id=%s"
+    books_sql = "select book_name,isbn,writer_name from book b inner join book_and_writer baw on b.book_id=baw.book_id inner join writer w on w.writer_id=baw.writer_id where b.book_id in (select region_and_book.book_id from region_and_book where region_id='%s' union select origin_and_book.book_id from origin_and_book where origin_id=%s"
     books_res = [i for i in opsql.select(books_sql,[region_id,origin_id], conn_info)]
     for i in books_res:
         books_dic = {}

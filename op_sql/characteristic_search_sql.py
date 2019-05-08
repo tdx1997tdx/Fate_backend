@@ -13,7 +13,7 @@ def characteristic_search(info,weight,height,conn_info=c.get_now_conn()):
     para.append(str(weight[1]))
     para.append(str(height[0]))
     para.append(str(height[1]))
-    sql="select s.servent_id,s.servent_name from servent s inner join servent_prototype sp on s.servent_id=sp.servent_id inner join prototype_origin po on sp.prototype_id=po.prototype_id inner join prototype_region pr on sp.prototype_id=pr.prototype_id inner join region r on pr.region_id=r.region_id inner join origin o on po.origin_id=o.origin_id inner join servent_alignment sa on sa.servent_id=s.servent_id inner join alignment a on a.alignment_id=sa.alignment_id inner join servent_and_class sac on sac.servent_id=s.servent_id inner join class c on sac.class_id=c.class_id "
+    sql="select s.servent_id,s.servent_name from servent s inner join servent_and_prototype sp on s.servent_id=sp.servent_id inner join prototype_and_origin po on sp.prototype_id=po.prototype_id inner join prototype_and_region pr on sp.prototype_id=pr.prototype_id inner join region r on pr.region_id=r.region_id inner join origin o on po.origin_id=o.origin_id inner join servent_and_alignment sa on sa.servent_id=s.servent_id inner join alignment a on a.alignment_id=sa.alignment_id inner join servent_and_class sac on sac.servent_id=s.servent_id inner join class c on sac.class_id=c.class_id "
     sql+=select_sql
     sql +=" group by s.servent_id"
     result = [i for i in opsql.select(sql,para,conn_info)]
