@@ -5,7 +5,7 @@ def characteristic_search(info,weight,height):
     para=[]
     for key in info:
         if not info[key]=='null':
-            select_sql+="%s=%s and "%(key)
+            select_sql+=key+"=%s and "
             para.append(info[key])
     select_sql+="height>=%s and height<=%s and weight>=%s and weight<=%s"
     para.extend([str(weight[0]),str(weight[1]),str(height[0]),str(height[1])])
