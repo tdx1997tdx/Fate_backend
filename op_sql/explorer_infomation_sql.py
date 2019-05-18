@@ -7,7 +7,7 @@ import random
 def explorer_infomation(id):
     db=opsql.Database()
     dic_info = {}
-    big_sql = "select region_name,origin_name,prototype_name,region_id,origin_id,prototype_id from bigsql where servent_id=%s;"
+    big_sql = "select region_name,origin_name,prototype_name,region_id,origin_id,prototype_id from explorer_infomation1 where servent_id=%s;"
     res = db.select(big_sql,[id])
     region_res = list(set([i[0] for i in res]))
     origin_res = list(set([i[1] for i in res]))
