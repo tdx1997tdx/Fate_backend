@@ -7,13 +7,7 @@ import random
 def explorer_infomation(id):
     db=opsql.Database()
     dic_info = {}
-    big_sql = "select region_name,origin_name,prototype_name,r.region_id,o.origin_id,p.prototype_id from servent_and_prototype sp " \
-              "inner join prototype p on sp.prototype_id=p.prototype_id " \
-              "inner join prototype_and_origin po on sp.prototype_id=po.prototype_id " \
-              "inner join prototype_and_region pr on sp.prototype_id=pr.prototype_id " \
-              "inner join region r on pr.region_id=r.region_id " \
-              "inner join origin o on po.origin_id=o.origin_id " \
-              "where servent_id=%s;"
+    big_sql = "select region_name,origin_name,prototype_name,region_id,origin_id,prototype_id from bigsql where servent_id=%s;"
     res = db.select(big_sql,[id])
     region_res = list(set([i[0] for i in res]))
     origin_res = list(set([i[1] for i in res]))

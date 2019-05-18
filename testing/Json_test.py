@@ -2,8 +2,8 @@ import json
 import requests
 
 def name_search_test1():
-    url = "https://dararara.xyz/name_search"
-    values = {'name':'亚瑟'}
+    url = "https://dararara.xyz/explorer_infomation"
+    values = {'servent_id':'231'}
     print('请求：',values)
     values_json = json.dumps(values)
     # requests库提交数据进行post请求
@@ -31,4 +31,4 @@ def name_search_test2():
     # 打印接口返回的数据,且以中文编码
     print('响应：',new_req)
 
-name_search_test2()
+name_search_test1()
