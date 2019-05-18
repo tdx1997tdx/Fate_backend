@@ -22,7 +22,7 @@ def characteristic_search(info,weight,height):
         'inner join servent_and_alignment sa on sa.servent_id=s.servent_id ' \
         'inner join alignment a on a.alignment_id=sa.alignment_id ' \
         'inner join servent_and_class sac on sac.servent_id=s.servent_id ' \
-        'inner join class c on sac.class_id=c.class_i '
+        'inner join class c on sac.class_id=c.class_id '
     sql+=select_sql+" group by s.servent_id;"
     result = db.select(sql,para)
     dic_info = []  # 所有人
