@@ -33,7 +33,7 @@ def explorer_infomation(id):
     dic_info['articles'] =[]
     articles_sql = "select a.article_id,article_title,article_content,author_name from region_and_article raa " \
                    "inner join article a on raa.article_id=a.article_id  " \
-                   "inner join origin_and_article oaa on a.article_id = oaa.article_id" \
+                   "inner join origin_and_article oaa on a.article_id = oaa.article_id " \
                    "inner join author_and_article aaa on a.article_id=aaa.article_id " \
                    "inner join author au on aaa.author_id=au.author_id " \
                    "where region_id=%s or origin_id=%s;"
