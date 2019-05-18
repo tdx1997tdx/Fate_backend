@@ -1,5 +1,8 @@
 from basic_sql_op import op_database as opsql
 
+'''
+按源类型查询相关英灵
+'''
 def prototype_search(prototype):
     db = opsql.Database()
     search = '%'
@@ -22,6 +25,9 @@ def prototype_search(prototype):
     db.close()
     return dic_info
 
+'''
+按地域名查询相关英灵
+'''
 def region_search(region):
     db = opsql.Database()
     search= '%'
@@ -46,7 +52,9 @@ def region_search(region):
     db.close()
     return dic_info
 
-
+'''
+按起源查询相关英灵
+'''
 def origin_search(origin):
     db = opsql.Database()
     search = '%'

@@ -1,5 +1,9 @@
 from basic_sql_op import op_database as opsql
 import random
+
+'''
+英灵探索功能
+'''
 def explorer_infomation(id):
     db=opsql.Database()
     dic_info = {}
@@ -34,11 +38,12 @@ def explorer_infomation(id):
 
     dic_info['articles'] =[]
     articles_sql = "select a.article_id,article_title,article_content,author_name from region_and_article raa " \
-                   "inner join article a on raa.article_id=a.article_id " \
+                   "inner join article a on raa.article_id=a.article_id  " \
+                   "inner join origin_and_article oaa on a.article_id = oaa.article_id" \
                    "inner join author_and_article aaa on a.article_id=aaa.article_id " \
                    "inner join author au on aaa.author_id=au.author_id " \
-                   "where region_id=%s;"
-    articles_res = db.select(articles_sql, [region_id])
+                   "where region_id=%s or origin_id=%s;"
+    articles_res = db.select(articles_sql, [region_id,origin_id])
     for i in articles_res:
         articles_dic = {}
         articles_dic['article_id'] = i[0]

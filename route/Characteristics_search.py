@@ -4,7 +4,7 @@ import sys
 page3=Blueprint("page3",__name__)
 
 @page3.route('/characteristics_search',methods=['GET','POST'])
-def name_search():
+def characteristics_search():
     try:
         data = json.loads(request.get_data())
     except:

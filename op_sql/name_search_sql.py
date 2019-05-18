@@ -1,4 +1,8 @@
 from basic_sql_op import op_database as opsql
+
+'''
+按姓名查询相关英灵
+'''
 def name_search(name):
     db = opsql.Database()
     search_name = "%"

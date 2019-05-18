@@ -1,5 +1,9 @@
 from basic_sql_op import op_database as opsql
 import random
+
+'''
+获取英灵信息
+'''
 def servent_infomation(id):
     db = opsql.Database()
     sql="select * from servent where servent_id=%s;"

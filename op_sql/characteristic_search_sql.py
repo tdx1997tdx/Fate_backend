@@ -1,8 +1,12 @@
 from basic_sql_op import op_database as opsql
+
+'''
+按特征查询相关英灵
+'''
 def characteristic_search(info,weight,height):
     db = opsql.Database()
-    select_sql="where "
     para=[]
+    select_sql="where "
     for key in info:
         if not info[key]=='null':
             select_sql+=key+"=%s and "
@@ -18,7 +22,7 @@ def characteristic_search(info,weight,height):
         'inner join servent_and_alignment sa on sa.servent_id=s.servent_id ' \
         'inner join alignment a on a.alignment_id=sa.alignment_id ' \
         'inner join servent_and_class sac on sac.servent_id=s.servent_id ' \
-        'inner join class c on sac.class_id=c.class_id '
+        'inner join class c on sac.class_id=c.class_id;'
     sql+=select_sql+" group by s.servent_id;"
     result = db.select(sql,para)
     dic_info = []  # 所有人
@@ -32,6 +36,9 @@ def characteristic_search(info,weight,height):
     db.close()
     return dic_info
 
+'''
+获取相关属性
+'''
 def get_attribute():
     db = opsql.Database()
     dic_info = {}  # 4个list
