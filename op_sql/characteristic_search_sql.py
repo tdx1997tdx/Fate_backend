@@ -2,6 +2,8 @@ from basic_sql_op import op_database as opsql
 
 '''
 按特征查询相关英灵
+input: 英灵起源，地域，类型，结盟，体重范围，身高范围
+output: 按照json格式返回获得该英灵的id,servent_name,servent_profile_pic属性。
 '''
 def characteristic_search(info,weight,height):
     db = opsql.Database()
@@ -37,7 +39,8 @@ def characteristic_search(info,weight,height):
     return dic_info
 
 '''
-获取相关属性
+特定所有属性获取
+output: 按照json格式返回数据库中已存在的所有地域，起源，结盟，类型信息。
 '''
 def get_attribute():
     db = opsql.Database()

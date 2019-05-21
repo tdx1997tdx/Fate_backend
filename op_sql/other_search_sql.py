@@ -2,6 +2,8 @@ from basic_sql_op import op_database as opsql
 
 '''
 按源类型查询相关英灵
+input: 原型
+output: 按照json格式返回与该原型有关的所有英灵id,姓名，图片网址。
 '''
 def prototype_search(prototype):
     db = opsql.Database()
@@ -27,6 +29,8 @@ def prototype_search(prototype):
 
 '''
 按地域名查询相关英灵
+input: 地域名
+output: 按照json格式返回与该地域名有关的所有英灵id,姓名，图片网址。
 '''
 def region_search(region):
     db = opsql.Database()
@@ -54,6 +58,8 @@ def region_search(region):
 
 '''
 按起源查询相关英灵
+input: 起源
+output: 按照json格式返回与该起源有关的所有英灵id,姓名，图片网址。
 '''
 def origin_search(origin):
     db = opsql.Database()

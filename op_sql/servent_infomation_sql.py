@@ -3,6 +3,10 @@ import random
 
 '''
 获取英灵信息
+input: 英灵id
+output: 按照json格式返回servent_id，servent_name，servent_name_japanese，servent_name_english，height，
+weight，gender，strength，endurance，agility，mana，luck，noble_phantasm，craft_name，craft_description，
+craft_src，alignment，class，illustrator，voice_actor，region，origin，prototype，full_picture，bond_text: [XXX,XXX,XXX]
 '''
 def servent_infomation(id):
     db = opsql.Database()

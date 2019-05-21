@@ -3,6 +3,8 @@ import random
 
 '''
 英灵探索功能
+input:英灵id,
+output:按照json格式返回返回英灵地域，原型，起源，还有相关的百科，文章，书籍信息。
 '''
 def explorer_infomation(id):
     db=opsql.Database()

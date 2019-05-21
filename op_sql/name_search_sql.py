@@ -2,6 +2,8 @@ from basic_sql_op import op_database as opsql
 
 '''
 按姓名查询相关英灵
+input: 英灵姓名
+output: 按照json格式返回英灵的id,servent_name,servent_profile_pic属性。
 '''
 def name_search(name):
     db = opsql.Database()
