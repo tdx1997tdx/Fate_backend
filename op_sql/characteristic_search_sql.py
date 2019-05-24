@@ -14,7 +14,7 @@ def characteristic_search(info,weight,height):
             select_sql+=key+"=%s and "
             para.append(info[key])
     select_sql+="height>=%s and height<=%s and weight>=%s and weight<=%s"
-    para.extend([str(weight[0]),str(weight[1]),str(height[0]),str(height[1])])
+    para.extend([str(height[0]),str(height[1]),str(weight[0]),str(weight[1])])
     sql='select s.servent_id,s.servent_name from servent s ' \
         'inner join servent_and_prototype sp on s.servent_id=sp.servent_id ' \
         'inner join prototype_and_origin po on sp.prototype_id=po.prototype_id ' \
