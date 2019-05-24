@@ -20,10 +20,10 @@ def characteristics_search():
     try:
         weight = []
         weight.append(0 if data['weight_down']=='-1' else int(data['weight_down']))
-        weight.append(sys.maxsize if data['weight_up'] == '-1' else int(data['weight_up']))
+        weight.append(10000 if data['weight_up'] == '-1' else int(data['weight_up']))
         height = []
         height.append(0 if data['height_down'] == '-1' else int(data['height_down']))
-        height.append(sys.maxsize if data['height_up'] == '-1' else int(data['height_up']))
+        height.append(10000 if data['height_up'] == '-1' else int(data['height_up']))
     except:
         return 'Weight Or Height Format Error'
     print(data)
