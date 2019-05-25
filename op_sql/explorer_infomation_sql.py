@@ -31,7 +31,9 @@ def explorer_infomation(id):
         pedias_dic['pedia_name'] = i[1]
         pedias_dic['pedia_url'] = i[2]
         dic_info['pedias'].append(pedias_dic)
-
+    print(region_id)
+    print(origin_id)
+    print(prototype_id)
     dic_info['articles'] =[]
     articles_sql = "select a.article_id,article_title,article_content,author_name from region_and_article raa " \
                    "inner join article a on raa.article_id=a.article_id  " \
